@@ -1,20 +1,18 @@
 import * as React from 'react';
-import './App.css';
+import GoogleMapReact from 'google-map-react';
+import { Coords } from 'google-map-react';
 
-const logo = require('./logo.svg');
+import './App.css';
 
 class App extends React.Component {
   render() {
+    const center:Coords = { lat: 35.650615, lng: 139.540694 }
+    const zoom = 13;
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <GoogleMapReact
+        center={center}
+        zoom={zoom} />
     );
   }
 }
