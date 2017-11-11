@@ -1,4 +1,4 @@
-import request from 'superagent'
+// import request from 'superagent'
 
 export interface Childcare {
   id: number;
@@ -18,4 +18,4 @@ export interface Application {
 
 }
 
-export default class 
+// export default class 
