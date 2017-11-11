@@ -6,13 +6,14 @@ import './App.css';
 
 class App extends React.Component {
   render() {
-    const center:Coords = { lat: 35.650615, lng: 139.540694 }
+    const center: Coords = { lat: 35.650615, lng: 139.540694 }
     const zoom = 13;
 
     return (
       <GoogleMapReact
         center={center}
-        zoom={zoom} />
+        zoom={zoom} >
+      </GoogleMapReact>
     );
   }
 }
