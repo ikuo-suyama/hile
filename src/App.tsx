@@ -2,6 +2,8 @@ import * as React from 'react';
 import GoogleMapReact from 'google-map-react';
 import { Coords } from 'google-map-react';
 
+import Index from './examples/Index'
+
 import './App.css';
 
 class App extends React.Component {
@@ -10,10 +12,12 @@ class App extends React.Component {
     const zoom = 13;
 
     return (
-      <GoogleMapReact
-        center={center}
-        zoom={zoom} >
-      </GoogleMapReact>
+      <Index>
+        <GoogleMapReact
+          center={center}
+          zoom={zoom} >
+        </GoogleMapReact>
+      </Index>
     );
   }
 }
