@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Button from 'material-ui/Button';
-import Dialog, {
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-} from 'material-ui/Dialog';
-import Typography from 'material-ui/Typography';
+// import Button from 'material-ui/Button';
+// import Dialog, {
+//   DialogTitle,
+//   DialogContent,
+//   DialogContentText,
+//   DialogActions,
+// } from 'material-ui/Dialog';
+// import Typography from 'material-ui/Typography';
 import Paper from 'material-ui/Paper';
 
 import withStyles, { WithStyles } from 'material-ui/styles/withStyles';
@@ -14,6 +14,8 @@ import withRoot from './withRoot';
 
 import GoogleMapReact from 'google-map-react';
 import { Coords } from 'google-map-react';
+
+import HileAppBar from '../HileAppBar'
 
 const styles = {
   root: {
@@ -52,32 +54,13 @@ class Index extends React.Component<WithStyles<keyof typeof styles>, State> {
 
     return (
       <div className={this.props.classes.root}>
-        <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>
-          <DialogTitle>Super Secret Password</DialogTitle>
-          <DialogContent>
-            <DialogContentText>1-2-3-4-5</DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button color="primary" onClick={this.handleRequestClose}>
-              OK
-            </Button>
-          </DialogActions>
-        </Dialog>
-        <Typography type="display1" gutterBottom>
-          Material-UI
-        </Typography>
-        <Typography type="subheading" gutterBottom>
-          example project
-        </Typography>
+        <HileAppBar />
         <Paper className={this.props.classes.paper}>
           <GoogleMapReact
             center={center}
             zoom={zoom} >
           </GoogleMapReact>
         </Paper>
-        <Button raised color="accent" onClick={this.handleClick}>
-          Super Secret Password
-        </Button>
       </div>
     );
   }
