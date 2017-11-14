@@ -14,7 +14,11 @@ const decorate = withStyles(theme => ({
     },
     body: {
       margin: 0,
+      height: '100vh',
     },
+    '#root': {
+      height: '100vh',
+    }
   },
 }));
 
